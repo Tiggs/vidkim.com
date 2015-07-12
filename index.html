@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app='vidApp' ng-controller='mainController'>
+<head>
+	<title>vidkim - {{Page.title()}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/tv.ico">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<base href="/">
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/ui-bootstrap-tpls.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="navbar navbar-static-top dk-docs-nav" id="top" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+			  <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#dk-navbar" aria-controls="dk-navbar" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="burger" ><img src="/images/hamburger.png"> Menu</span>
+			  </button>
+			  <a href="/" class="navbar-brand">vidkim</a>
+			</div>
+			<nav id="dk-navbar" class="collapse navbar-collapse navbar-default" role="navigation">
+				<ul class="nav navbar-nav navbar-right">
+					<li ng-class="{ active: isActive('/about')}">
+					  <a href="/about">about</a>
+					</li>
+					<li ng-class="{ active: isActive('/resume')}">
+					  <a href="/resume">resume</a>
+					</li>
+					<li ng-class="{ active: isActive('/projects')}">
+					  <a href="/projects">projects</a>
+					</li>
+					<li ng-class="{ active: isActive('/contact')}">
+					  <a href="/contact">contact</a>
+					</li>
+			  </ul>
+			</nav>
+		</div>
+	</header>
+	<main class="masthead jumbotron" id="content" role="main">
+		<div class="container">			
+			<div class="hard_to_read">
+				<h1>Hi, I'm David!</h1>
+				<h1>I write software!</h1>
+				<p>(I also occasionally make stuff)</p>
+			</div>
+		</div>
+	</main>
+	<div id="main">	
+		<div ng-view>
+			
+		</div>
+	</div>
+	
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<p>2015 David Kim | Powered by Pizza and French Fries<p>
+		</div>
+	</footer>
+	
+</body>
+</html>

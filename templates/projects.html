@@ -1,0 +1,38 @@
+<div class="featurette" ng-controller='projectsController'>
+	<div class="container stuff">
+		<h2 class="featurette-title">Projects</h2>
+		<div class="project_frame">
+			<div class="">
+				<ul class="project-selection col-xs-3 nav nav-stacked">
+					<li class="project-selector project-selected" role="gallery" id="project-selector-0">
+						<img src="images/gallery_blank_preview.png"">
+						<p>TiggsBot</p>			
+					</li>
+					<li class="project-selector" role="gallery" id="project-selector-1">
+						<img src="images/projects/ambilight/preview.jpg">
+						<p>Ambilight Clone</p>	
+					</li>
+					<li class="project-selector" role="gallery" id="project-selector-2">
+						<img src="images/gallery_blank_preview.png">
+						<p>vidkim</p>
+					</li>
+					<li class="project-selector" role="gallery" id="project-selector-3">
+						<img src="images/gallery_blank_preview.png">
+						<p>Works in Progress</p>			
+					</li>					
+				</ul>
+			</div>
+			
+			<div class="slide col-xs-9 gallery_view" id="slides_control">
+				<carousel interval="myInterval">
+					<slide ng-repeat="slide in slides" active="slide.active">
+						<img ng-src="{{slide.image}}">
+						<div class="carousel-caption">
+							<h4>{{slide.caption}}</h4>
+						</div>
+					</slide>
+				</carousel>
+			</div>	
+		</div>
+	</div>
+</div>
