@@ -42,7 +42,6 @@ a {
     color: black;
 }
 
-
 .dark-blue {
     background-color: #354458;
 }
@@ -81,9 +80,6 @@ a {
 	margin-bottom: 0px;
 }
 
-.navbar-default {
-    
-}
 
 .navbar .container { 
 	background: rgba(255,255,255, 0);
@@ -103,6 +99,7 @@ a {
 
 .navbar-brand {
     padding-left: 20px;
+    background-color: #f8f8f8;
 }
 
 .burger {
@@ -232,11 +229,7 @@ a {
 */
 
 #resume {
-    margin-top: 10px;
-    font: 10pt;
-    color: #111;
-    text-align: left;
-    padding: 10px 30px 30px 30px;
+
 }
 
 #resume p {
@@ -257,7 +250,7 @@ a {
 }
 
 .gallery_frame {
-
+    display: none;
 }
 
 .close-button {
@@ -275,7 +268,6 @@ a {
   margin:auto;
 }
 #slides_control { 
-  display: none;
   width: 600px;
   margin: 0 auto;
   top:20px;
