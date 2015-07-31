@@ -1,7 +1,7 @@
 <!doctype html>
 <html ng-app='vidApp' ng-controller='mainController'>
 <head>
-	<title>vidkim - {{Page.title()}}</title>
+	<title ng-bind="'vidkim - ' + title">vidkim</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="/tv.ico">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,46 +19,114 @@
 </head>
 
 <body>
-    <header class="navbar navbar-static-top dk-docs-nav" id="top" role="banner">
-		<div class="container">
-			<div class="navbar-header">
-			  <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#dk-navbar" aria-controls="dk-navbar" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="burger" ><img src="/images/hamburger.png"> Menu</span>
-			  </button>
-			  <a href="/" class="navbar-brand">vidkim</a>
-			</div>
-			<nav id="dk-navbar" class="collapse navbar-collapse navbar-default" role="navigation">
-				<ul class="nav navbar-nav navbar-right">
-					<li ng-class="{ active: isActive('/about')}">
-					  <a href="/about">about</a>
-					</li>
-					<li ng-class="{ active: isActive('/resume')}">
-					  <a href="/resume">resume</a>
-					</li>
-					<li ng-class="{ active: isActive('/projects')}">
-					  <a href="/projects">projects</a>
-					</li>
-					<li ng-class="{ active: isActive('/contact')}">
-					  <a href="/contact">contact</a>
-					</li>
-			  </ul>
-			</nav>
-		</div>
-	</header>
 	<main class="masthead jumbotron" id="content" role="main">
+	    <header class="navbar navbar-static-top dk-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+				  <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#dk-navbar" aria-controls="dk-navbar" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="burger"><img src="/images/hamburger.png"> Menu</span>
+				  </button>
+				  <a href="/" class="navbar-brand">vidkim</a>
+				</div>
+				<nav id="dk-navbar" class="collapse navbar-collapse navbar-default" role="navigation">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">Work</a>
+						</li>
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">Resume</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>						
+				  </ul>
+				</nav>
+			</div>
+		</header>		
 		<div class="container">			
 			<div class="hard_to_read">
 				<h1>Hi, I'm David!</h1>
-				<h1>I write software!</h1>
-				<p>(I also occasionally make stuff)</p>
+				<h1>I write code!</h1>
+				<p>(I also love to build things)</p>
 			</div>
 		</div>
 	</main>
-	<div id="main">	
-		<div ng-view>
-			
+	<div id="main">
+		<div class="featurette container stuff dark-blue">
+			<h2 class="featurette-title"><i class="fa fa-archive"></i> Work</h2>
+			<div class="featurette gallery_frame">
+				<div class="slide gallery_view" id="slides_control">
+					<carousel interval="myInterval">
+						<slide ng-repeat="slide in slides" active="slide.active">
+							<img ng-src="{{slide.image}}">
+							<div class="carousel-caption">
+								<h4>{{slide.caption}}</h4>
+							</div>
+						</slide>
+					</carousel>
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4 project-selector project-selected" role="gallery" id="project-selector-0">
+					<img src="images/projects/tiggsbot/preview_big.jpg" alt="about - tiggs bot, a python based irc bot" class="img-responsive featured">
+					<p>TiggsBot, a NodeJS IRC Bot</p>
+				</div>
+				<div class="col-sm-4 project-selector" role="gallery" id="project-selector-1">
+					<img src="images/projects/ambilight/preview_big.jpg" alt="about - ambient light clone" class="img-responsive featured">
+					<p>AmbiLight Clone</p>
+				</div>				
+				<div class="col-sm-4 project-selector" role="gallery" id="project-selector-2">
+					<img src="images/projects/moonkin/preview_big.jpg" alt="about - vidkim.com" class="img-responsive featured">
+					<p>Moonkin.io</p>
+				</div>				
+			</div>
 		</div>
+
+		<div class="featurette container stuff light-blue">
+			<h2 class="featurette-title"><i class="fa fa-user"></i> About Me</h2>
+			<div class="row">
+				<div class="team-member">
+					<img src="images/me.jpg" class="img-responsive img-circle" alt>
+					<p class="text-muted"></p>
+				</div>		
+			</div>
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+					<p class="large">
+						I'm David. I'm a Software Engineer.<br>
+						I love JavaScript, Python and video games! <br>					
+						<br>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="featurette container stuff light-green" id="resume-parent">
+			<h2 class="featurette-title"><i class="fa fa-briefcase"></i> Resume</h2>
+			<table class="resume_links">
+					<tr>
+						<td><a href="resume.pdf" target="_self"><i class="fa fa-file-pdf-o"></i> PDF</a></td>
+						<td><a href="resume.docx" target="_self"><i class="fa fa-file-word-o"></i> Word Document</a></td>
+						<td><a href="resume.txt" target="_self"><i class="fa fa-file-text-o"></i> Plain Text</a></td>
+					</tr>
+			</table>
+		</div>
+
+
+		<div class="featurette container stuff light-red">
+				<h2 class="featurette-title"><i class="fa fa-envelope"></i> Contact</h2>
+				<p>
+					<a href="mailTo:&#100;&#064;&#118;&#105;&#100;&#107;&#105;&#109;&#046;&#099;&#111;&#109;"><i class="fa fa-envelope-o" style="padding-right: .25em;"> </i>&#100;&#064;&#118;&#105;&#100;&#107;&#105;&#109;&#046;&#099;&#111;&#109;</a>
+				</p>
+				<p><a href="https://www.linkedin.com/pub/david-kim/21/450/3a2"><i class="fa fa-linkedin"></i> LinkedIn</a></p>
+				<p><a href="https://github.com/Tiggs"><i class="fa fa-github"></i> GitHub</a></p>
+		</div>
+
 	</div>
 	
 	<footer class="footer" role="contentinfo">

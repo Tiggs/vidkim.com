@@ -1,32 +1,38 @@
-David Kim
+﻿David Kim
 d@vidkim.com | http://vidkim.com
 
+
 Summary
-	A software engineer with a strong background in web and front end technology including Python and JavaScript, looking for new opportunities and challenges of scale.
+A software engineer with a strong background in web and front end technology including JavaScript and Python, looking for new opportunities and challenges of scale.
 
-Experience
-	Novetta Solutions (Software Engineer): Jan 2011 - Present
-		*Designed and implemented a Titan graph database with a web-based front end to allow law enforcement agencies to quickly search and investigate affiliations of suspects
-		*Enhanced a data warehouse search system for law enforcement agencies with a new JSON based query feature to allow for external site searches
-		*Enhanced the usability of a Spring-based collaborative event management capability with a new web interface, used by defense personnel to notify each other of event statuses
-		*Supplied live communication and information statuses to defense personnel while performing maintenance and deployments
-		*Designed a kiosk web page with video for our enterprise service monitoring product for a Department of Defense trade show
-		*Mentored interns and guided them through a Spring based code base, providing feedback on their performance and peer reviewing their code
-		*Assisted in quality assurance and responded to feedback from senior testers
-		*Researched and designed the tools necessary to build an XML-based automated reporting utility for monitoring metrics for services to, saving the customer time
 
-	TeleTown Hall (Software Developer): Aug 2008 - Jan 2009
-		*Created a PHP based solution for automated invoice generation and billing for clients 
+Software Experience
+Novetta Solutions (Software Engineer): Jan 2011 - Present
+* Designed and implemented a Titan graph database with a web-based front end to allow law enforcement agencies to quickly search and investigate affiliations of suspects
+* Enhanced a data warehouse search system for law enforcement agencies with a new JSON-based query feature to allow for external site searches
+* Enhanced the usability of a Spring-based net-centric event management capability with a new web interface, used by defense personnel to notify each other of event statuses
+* Supplied live communication and information statuses to defense personnel while performing maintenance and deployments
+* Designed a kiosk web page with video for our enterprise service monitoring product for a Department of Defense trade show
+* Mentored interns and guided them through our product repository, evaluating their commits and providing feedback on their performance[a][b]
+* Assisted in quality assurance and responded to feedback from senior testers
+* Researched and designed the tools necessary to build an XML-based automated reporting utility for monitoring metrics for enterprise services, saving the customer time and money
 
-Technical
-	Languages: Python, HTML, JavaScript, Java, Groovy
-	Databases: TitanDB, OracleDB, SQLite
-	Frameworks & Libraries: JQuery, TinkerPop, AngularJS, PyTest, Bootstrap
-	Other: Adobe Photoshop, Vim, Git, Amazon Web Services, BIRT
+
+TeleTown Hall (Software Developer): Aug 2008 - Jan 2009
+* Created a PHP-based solution for automated invoice generation and billing for clients 
+
+
+Technical Skills
+Languages: Python, JavaScript, HTML, Java, Groovy
+Databases: TitanDB, OracleDB, SQLite
+Frameworks & Libraries: JQuery, AngularJS, SASS, TinkerPop, PyTest, Bootstrap
+Other: Adobe Photoshop, Vim, Git, BIRT
+
 
 Projects
-	TiggsBot - http://github.com/tiggs/tiggsbot - A Python-based Internet Relay Chat bot to enhance a chat room experience, accepts commands and logs quotes from users
+TiggsBot (http://github.com/tiggs/tiggsbot): A NodeJS Internet Relay Chat bot to enhance a chat room experience, provides Twitch stream notifications
+
 
 Education
-	George Mason University - Fairfax, VA
-	Bachelor of Science in Computer Science, completed Dec 2011
+George Mason University - Fairfax, VA
+Bachelor of Science in Computer Science, completed Dec 2011

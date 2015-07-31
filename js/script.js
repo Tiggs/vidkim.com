@@ -5,23 +5,28 @@ vidApp.config(function($routeProvider, $locationProvider) {
 	$routeProvider
 		.when('/', {
 			templateUrl: 'templates/main.html',
-			controller: 'mainController'
+			controller: 'mainController',
+			title: 'Welcome'
 		})
 		.when('/about', {
 			templateUrl: 'templates/about.html',
-			controller: 'aboutController'
+			controller: 'aboutController',
+			title: 'About'
 		})
 		.when('/projects', {
 			templateUrl: 'templates/projects.html',
-			controller: 'projectsController'
+			controller: 'projectsController',
+			title: 'Projects'
 		})
 		.when('/resume', {
 			templateUrl: 'templates/resume.html',
-			controller: 'resumeController'
+			controller: 'resumeController',
+			title: 'Resume'
 		})
 		.when('/contact', {
 			templateUrl: 'templates/contact.html',
-			controller: 'contactController'
+			controller: 'contactController',
+			title: 'Contact'
 		});
 		
 	$locationProvider.html5Mode(true);
@@ -36,18 +41,20 @@ vidApp.factory('Page', function(){
 });
 
 // individual controllers
+/*
 vidApp.controller('mainController', function($scope, Page, $location) {
 	$scope.Page = Page;
     $scope.isActive = function (viewLocation) { 
         return viewLocation === $location.path();
     };	
 });
+*/
 
 vidApp.controller('aboutController', function($scope, Page) {
 	Page.setTitle('about');
 });
 
-vidApp.controller('projectsController', function($scope, Page) {
+vidApp.controller('mainController', function($scope, Page) {
 	Page.setTitle('projects');
 	$scope.myInterval = 0;
 	$scope.slide_title = ''
@@ -177,3 +184,10 @@ vidApp.controller('resumeController', function($scope, Page) {
 vidApp.controller('contactController', function($scope, Page) {
 	Page.setTitle('contact');
 });
+
+
+vidApp.run(['$rootScope', function($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.title = current.$$route.title;
+    });
+}]);
