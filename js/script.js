@@ -41,20 +41,18 @@ vidApp.factory('Page', function(){
 });
 
 // individual controllers
-/*
 vidApp.controller('mainController', function($scope, Page, $location) {
 	$scope.Page = Page;
     $scope.isActive = function (viewLocation) { 
         return viewLocation === $location.path();
     };	
 });
-*/
 
 vidApp.controller('aboutController', function($scope, Page) {
 	Page.setTitle('about');
 });
 
-vidApp.controller('mainController', function($scope, Page) {
+vidApp.controller('projectsController', function($scope, Page) {
 	Page.setTitle('projects');
 	$scope.myInterval = 0;
 	$scope.slide_title = ''

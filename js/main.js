@@ -1,4 +1,5 @@
 $('document').ready(function() {
+    var rolledProject = false;
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
 
@@ -14,6 +15,12 @@ $('document').ready(function() {
 
 
     $('.project-selector').click(function(e) {
-        $('.gallery_frame').toggle();
+        /*
+        $('.gallery_frame').slideToggle(400, function() {
+        });
+*/
     });
+
+
+
 });
