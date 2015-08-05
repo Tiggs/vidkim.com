@@ -42,36 +42,28 @@ vidApp.factory('Page', function(){
 
 // individual controllers
 vidApp.controller('mainController', function($scope, Page, $location) {
-	$scope.Page = Page;
     $scope.isActive = function (viewLocation) { 
         return viewLocation === $location.path();
-    };	
-});
+    };
 
-vidApp.controller('aboutController', function($scope, Page) {
-	Page.setTitle('about');
-});
-
-vidApp.controller('projectsController', function($scope, Page) {
-	Page.setTitle('projects');
 	$scope.myInterval = 0;
 	$scope.slide_title = ''
 	$scope.slides = ''
 	
 	var gallery_id = 0;
 
-	$scope.init = function () {
-		set_gallery(0);
-	}
-
 	$('.project-selector').click(function() {
+		$('.gallery_frame').slideToggle(400, null);
 		gallery_id = $(this).attr('id').match(/\d+/)[0];
 		set_gallery(gallery_id);
 		
 		$('.project-selector').removeClass('project-selected');
 		$('#project-selector-' + gallery_id).addClass('project-selected');
+	
 	});
+
 	function set_gallery(id) {
+		/*
 		if (id == '0') {
 			$scope.slide_title = 'TiggsBot';
 			$scope.slides = [
@@ -85,32 +77,33 @@ vidApp.controller('projectsController', function($scope, Page) {
 				}		
 			];	
 		}
-		if (id == '1') {
+		*/
+		if (id == '0') {
 			$scope.slide_title = 'Ambilight Clone';
 			$scope.slides = [
 				{
 					image: '/images/projects/ambilight/10.jpg',
-					caption: 'This project is an Ambilight Clone, based off the Philips Ambilight feature in TV sets. It accepts a video feed from any HDMI source and with the help of a Raspberry Pi computer, illuminates LEDs based off that source. The LEDs are mounted behind a TV, giving an incredible visual effect that the image is being \'projected\' off the wall.'
+					caption: 'This project is an Ambilight Clone, based off the Philips Ambilight feature in TV sets. '
 				},	
 				{
 					image: '/images/projects/ambilight/3.jpg',
-					caption: 'Here\'s the paper diagram I drew out of the project. A source video stream goes to a 2 to 1 HDMI splitter, sending one signal to the TV, and the other to an RCA to USB adapter. This USB adapter plugs in to a Raspberry Pi. Attached to the GPIO (General Input Output) pins on the Pi, will be connections to an LED strip that recieves signals and power. A 5v power cable will be spliced into a Y shape to feed power and ground to the Pi and the LED power pins.'
+					caption: 'A source video stream goes to a 2 to 1 HDMI splitter, sending one signal to the TV, and the other to an RCA to USB adapter.'
 				}, 
 				{
 					image: '/images/projects/ambilight/1.jpg',
-					caption: 'Gutting the LED strip. The LEDs are of type WS2801, significant due to each individual LED being addressable via a simple array. For example, to light the first LED, you would just write to Led 0 a color and that LED would stay lit.'
+					caption: 'Gutting the LED strip.'
 				}, 
 				{
 					image: '/images/projects/ambilight/2.jpg',
-					caption: 'I cut the WS2801 LED into 3 sections to allow for an easier bend around the corner, then soldered the connections together. The strips are also double backed with adhesive, easing the mounting process later.'
+					caption: 'I cut the WS2801 LED into 3 sections to allow for an easier bend around the corner.'
 				}, 			
 				{
 					image: '/images/projects/ambilight/4.jpg',
-					caption: 'I needed a reasonable length of wire to run from the Raspberry Pi to the TV, so I took apart an ethernet cable. Ethernet cables (generally) have 4 pairs of wires, each pair corresponding to Transmit and Recieve, so I removed the striped connections and left the solids.'
+					caption: 'I took apart an ethernet cable for a long enough cable to reach the TV.'
 				}, 
 				{
 					image: '/images/projects/ambilight/5.jpg',
-					caption: 'To ensure portability, I soldered a 4 pin male header onto the ethernet cable to run to the LED strip. This will connect to a corresponding female adapter I soldered on the LED strip.'
+					caption: 'To ensure portability, I soldered a 4 pin male header onto the ethernet cable to run to the LED strip.'
 				}, 			
 				{
 					image: '/images/projects/ambilight/6.jpg',
@@ -118,11 +111,11 @@ vidApp.controller('projectsController', function($scope, Page) {
 				}, 
 				{
 					image: '/images/projects/ambilight/7.jpg',
-					caption: 'First power test with the LEDs. It\'s alive! I wrote a simple program to write to the LEDs on an Arduino micro controller to ensure the wiring was correct and there was sufficient power.'
+					caption: 'I wrote a simple program to write to the LEDs on an Arduino micro controller to ensure the wiring was correct and there was sufficient power.'
 				}, 
 				{
 					image: '/images/projects/ambilight/8.jpg',
-					caption: 'The magic of this project lies in the conversion software. https://github.com/tvdzwan/hyperion/wiki Hyperion watches a /dev/video0 feed and based on a configuration, writes an array to the Serial Peripheral Interface, lighting the LED strip. This image shows what the Raspberry Pi is seeing.'
+					caption: 'The magic of this project lies in the conversion software. https://github.com/tvdzwan/hyperion/wiki'
 				}, 			
 
 				{
@@ -131,6 +124,7 @@ vidApp.controller('projectsController', function($scope, Page) {
 				}					
 			];	
 		}
+		/*
 		if (id == '2') {
 			$scope.slide_title = 'vidkim.com';
 			$scope.slides = [
@@ -164,15 +158,27 @@ vidApp.controller('projectsController', function($scope, Page) {
 					caption: 'Hello world'
 				}		
 			];	
-		}		
-				
-		$scope.$apply(function() {
-			//$scope.setActive(slide_title);
-			//$scope.setActive(slides);
-		});
+		}
+		*/	
 	}
+
+	$scope.init = function () {
+		set_gallery(0);
+		console.log('starting')
+	}
+
 	$scope.init();
 	
+
+
+});
+
+vidApp.controller('aboutController', function($scope, Page) {
+	Page.setTitle('about');
+});
+
+vidApp.controller('projectsController', function($scope, Page) {
+	Page.setTitle('projects');	
 });
 
 vidApp.controller('resumeController', function($scope, Page) {

@@ -1,94 +1,111 @@
+/*
 @screen-xs-max: 767px;
 @screen-sm-min: 768px;
 @screen-sm-max: 991px;
 @screen-md-min: 992px;
 @screen-md-max: 1199px;
 @screen-lg-min: 1200px;
-
+*/
 @media (min-width: 768px) {
-    .navbar-right {
-        margin-right: 0;
-    }
+  /* line 10, ../sass/style.scss */
+  .navbar-right {
+    margin-right: 0;
+  }
 }
-
-
 @media (max-width: 767px) {
-    .navbar-nav {
-        text-align: center;
-    }
-    body {
-        padding-right: 0;
-        padding-left: 0; 
-    }
-}
+  /* line 16, ../sass/style.scss */
+  .navbar-nav {
+    text-align: center;
+  }
 
-html {  
-  -webkit-tap-highlight-color:transparent;
+  /* line 19, ../sass/style.scss */
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* line 25, ../sass/style.scss */
+html {
+  -webkit-tap-highlight-color: transparent;
   position: relative;
   min-height: 100%;
 }
 
+/* line 31, ../sass/style.scss */
 body {
   margin-bottom: 40px;
-  background-image: url('../images/tweed.png');
+  background-image: url("../images/tweed.png");
   color: #e9e0d6;
 }
 
+/* line 37, ../sass/style.scss */
 p {
-    color: #eee;
+  color: #eee;
 }
 
+/* line 41, ../sass/style.scss */
 a {
-    color: black;
+  color: black;
 }
 
+/* line 45, ../sass/style.scss */
 .dark-blue {
-    background-color: #354458;
+  background-color: #354458;
 }
 
+/* line 49, ../sass/style.scss */
 .light-blue {
-    background-color: #3a9ad9;
+  background-color: #3a9ad9;
 }
 
+/* line 53, ../sass/style.scss */
 .light-green {
-    background-color: #29aba4;
+  background-color: #29aba4;
 }
 
+/* line 57, ../sass/style.scss */
 .light-red {
-    background-color: #eb7260;
+  background-color: #eb7260;
 }
 
-
+/* line 62, ../sass/style.scss */
 .container {
   padding: 0 15px;
 }
+
+/* line 65, ../sass/style.scss */
 .container .text-muted {
   margin: 20px 0;
 }
 
+/* line 69, ../sass/style.scss */
 .container .stuff {
-    background-color: white;
+  background-color: white;
 }
 
+/* line 73, ../sass/style.scss */
 #dk-navbar {
-    border-radius: 0;
-    background-color: rgba(20,20,20,0.5);
+  border-radius: 0;
+  background-color: rgba(20, 20, 20, 0.5);
 }
-  
+
+/* line 78, ../sass/style.scss */
 .navbar {
-    top: -5px;
-	margin-bottom: 0px;
+  top: -5px;
+  margin-bottom: 0px;
 }
 
-
-.navbar .container { 
-	background: rgba(255,255,255, 0);
+/* line 83, ../sass/style.scss */
+.navbar .container {
+  background: rgba(255, 255, 255, 0);
 }
 
+/* line 87, ../sass/style.scss */
 .navbar-toggle {
-	padding: 1px;
+  padding: 1px;
 }
 
+/* line 91, ../sass/style.scss */
 .navbar-toggle .icon-bar {
   display: block;
   width: 22px;
@@ -97,106 +114,120 @@ a {
   border-radius: 1px;
 }
 
+/* line 99, ../sass/style.scss */
 .navbar-brand {
-    padding-left: 20px;
-    background-color: #f8f8f8;
+  padding-left: 20px;
 }
 
+/* line 103, ../sass/style.scss */
 .burger {
-	padding: 5px;
-	border-radius: 2px;
-	border: 1px solid #337ab7;
-	color: #337ab7;
-	margin-right: 7px;
-    background-color: white;
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid #337ab7;
+  color: #337ab7;
+  margin-right: 7px;
+  background-color: white;
 }
 
+/* line 112, ../sass/style.scss */
 .masthead {
-	/*background-color: #fff;*/
-	padding: 90px 0 0 10px;
-	min-height: 550px;
-	width: 100%;
-    -webkit-box-shadow:inset 0px 0px 0px 1px #100;
-    -moz-box-shadow:inset 0px 0px 0px 1px #100;
-    box-shadow:inset 0px 0px 0px 1px #100;
+  /*background-color: #fff;*/
+  padding: 90px 0 0 10px;
+  min-height: 550px;
+  width: 100%;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #100;
+  -moz-box-shadow: inset 0px 0px 0px 1px #100;
+  box-shadow: inset 0px 0px 0px 1px #100;
 }
 
+/* line 122, ../sass/style.scss */
 .masthead .container {
-	padding: 10px;
-	color: #eee;
-	text-align: right;
-	text-shadow: 3px 3px 4px rgba(10,10,10, 1);
+  padding: 10px;
+  color: #eee;
+  text-align: right;
+  text-shadow: 3px 3px 4px #0a0a0a;
 }
 
+/* line 129, ../sass/style.scss */
 .jumbotron {
-	padding: 0px 0 5px 0;
-	background-image: url("../images/me_tv_wide.jpg");
-	background-size: cover;
-    background-position: 0% 15%;
-	margin-bottom: 0;
+  padding: 0px 0 5px 0;
+  background-image: url("../images/me_tv_wide.jpg");
+  background-size: cover;
+  background-position: 0% 15%;
+  margin-bottom: 0;
 }
 
+/* line 137, ../sass/style.scss */
 .hard_to_read {
-	background-color: rgba(5,4,2,0.4);
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding: 5px 30px;
-	margin-right: 40px;
-	float: right;
+  background-color: rgba(5, 4, 2, 0.4);
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 30px;
+  margin-right: 40px;
+  float: right;
 }
 
+/* line 146, ../sass/style.scss */
 .navbar-header {
-	padding: 0 10px;
+  padding: 0 10px;
 }
 
+/* line 150, ../sass/style.scss */
 .stuff {
-	text-align: center;
-	display: block;
-    position: relative;
-    min-height: 300px;
+  text-align: center;
+  display: block;
+  position: relative;
+  min-height: 300px;
 }
 
+/* line 157, ../sass/style.scss */
 .stuff .featurette-title {
-	margin-bottom: .75em;
+  margin-bottom: .75em;
 }
 
-.featurette { 
-	text-align: center;
-	color: #ddd;
-	line-height: 1.5;
-	font-size:16px;
-	padding-top: 5px;
-	padding-bottom: 40px;
+/* line 161, ../sass/style.scss */
+.featurette {
+  text-align: center;
+  color: #ddd;
+  line-height: 1.5;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 40px;
 }
 
- .featurette-title {
-    color: #eee;
- }
+/* line 170, ../sass/style.scss */
+.featurette-title {
+  color: #eee;
+}
 
+/* line 174, ../sass/style.scss */
 .img-responsive {
-	margin-top: 0;
-	display: inline;
+  margin-top: 0;
+  display: inline;
 }
 
 /* resume */
-
+/* line 181, ../sass/style.scss */
 .resume_links {
-	margin: 0 auto;
-
+  margin: 0 auto;
 }
 
-.resume_links td { 
-	padding: 0 1em;
+/* line 186, ../sass/style.scss */
+.resume_links td {
+  padding: 0 1em;
 }
 
+/* line 190, ../sass/style.scss */
 .featured {
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* line 194, ../sass/style.scss */
 #resume-parent {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
+/* line 198, ../sass/style.scss */
 #resume-parent > div {
   position: absolute;
   background: #eee;
@@ -227,74 +258,89 @@ a {
 	}
 }
 */
-
-#resume {
-
-}
-
+/* line 233, ../sass/style.scss */
 #resume p {
-    color: #111;
+  color: #111;
 }
 
-.resume-top  {
-	text-align: center;
+/* line 237, ../sass/style.scss */
+.resume-top {
+  text-align: center;
 }
 
 /* projects */
+/* line 242, ../sass/style.scss */
 .active {
-	background-color: #fff;
+  background-color: #fff;
 }
 
+/* line 246, ../sass/style.scss */
 .gallery_image {
-    padding: 10px 15px;
+  padding: 10px 15px;
 }
 
+/* line 250, ../sass/style.scss */
 .gallery_frame {
-    display: none;
+  display: none;
 }
 
+/* line 254, ../sass/style.scss */
 .close-button {
-    text-align: right;
+  text-align: right;
 }
 
+/* line 258, ../sass/style.scss */
 .close-button i {
- color: #eee;
+  color: #eee;
 }
 
-#slides_control > div{
-  /*height: 600px;*/
+/* line 262, ../sass/style.scss */
+#slides_control > div {
+  height: 450px;
 }
-.gallery_view img{
-  margin:auto;
+
+/* line 266, ../sass/style.scss */
+.gallery_view {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-#slides_control { 
+/* line 268, ../sass/style.scss */
+.gallery_view img {
+  margin: auto;
+}
+
+/* line 273, ../sass/style.scss */
+#slides_control {
   width: 600px;
   margin: 0 auto;
-  top:20px;
+  top: 20px;
 }
 
+/* line 279, ../sass/style.scss */
 #project-selector-0:hover, #project-selector-1:hover, #project-selector-2:hover {
-    color: red;
+  color: red;
 }
 
-
+/* line 284, ../sass/style.scss */
 .carousel-caption h4 {
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   padding: 2px;
+  background: black;
+  /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2px;
 }
 
+/* line 290, ../sass/style.scss */
 .img-circle {
-    border: solid 2px #e9e0d6;
+  border: solid 2px #e9e0d6;
 }
 
+/* line 294, ../sass/style.scss */
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 40px;
-  padding-top:10px;
+  padding-top: 10px;
   /*background-color: #fff;*/
   text-align: center;
 }

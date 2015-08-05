@@ -14,13 +14,4 @@ $('document').ready(function() {
     });
 
 
-    $('.project-selector').click(function(e) {
-        /*
-        $('.gallery_frame').slideToggle(400, function() {
-        });
-*/
-    });
-
-
-
 });
